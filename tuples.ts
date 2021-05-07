@@ -1,8 +1,13 @@
-const drinf = {
+const drink = {
   color: 'brown',
   carbonated: true,
   sugar: 40,
 };
+
+/*
+Tuples - array like structure where each element
+represents some property of a record
+*/
 
 type Drink = [string, boolean, number];
 

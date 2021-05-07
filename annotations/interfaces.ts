@@ -1,6 +1,20 @@
-interface Reportable {
-  summary(): string;
+/*
+Interface creates new type, desribing the property
+names and value types of an object
+*/
+
+interface Vehicle {
+  name: string;
+  year: Date;
+  broken: boolean;
+  summary?: () => string;
 }
+
+const printVehicle = (vehicle: Vehicle): void => {
+  console.log(`Name: ${vehicle.name}`);
+  console.log(`Year: ${vehicle.year}`);
+  console.log(`Broken: ${vehicle.broken}`);
+};
 
 const oldCivic = {
   name: 'civic',
@@ -10,6 +24,14 @@ const oldCivic = {
     return `Name: ${this.name}`;
   },
 };
+
+printVehicle(oldCivic);
+
+////////////////////////////////
+
+interface Reportable {
+  summary(): string;
+}
 
 const drink = {
   color: 'brown',

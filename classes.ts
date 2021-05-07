@@ -1,4 +1,16 @@
+/*
+Class - blueprint to create an object with some fields
+(values) and methods (functions) to represent a 'thing'
+*/
+
 class Vehicle {
+  // color: string;
+
+  // constructor(color: string) {
+  //   this.color = color
+  // }
+
+  // shortcut
   constructor(public color: string) {}
 
   protected honk(): void {
@@ -9,7 +21,7 @@ class Vehicle {
 const vehicle = new Vehicle('orange');
 console.log(vehicle.color);
 
-class Car extends Vehicle {
+class Bus extends Vehicle {
   constructor(public wheels: number, color: string) {
     super(color);
   }
@@ -24,5 +36,5 @@ class Car extends Vehicle {
   }
 }
 
-const car = new Car(4, 'red');
-car.startDrivingProcess();
+const bus = new Bus(4, 'red');
+bus.startDrivingProcess();
